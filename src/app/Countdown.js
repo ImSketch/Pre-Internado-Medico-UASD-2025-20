@@ -34,10 +34,10 @@ const computeTimeLeft = (expiresTimestamp) => {
  * @param   {string}  label
  * @returns {JSX.Element}
  */
-function TimeUnit({ value, className, ...props }) {
+function TimeUnit({ value, className, ignorePadStart = false, ...props }) {
     return (
         <div className={`animate-fade-up animate-once animate-duration-150 animate-ease-in-out tabular-nums w-[2ch] ${className}`} {...props}>
-            {value.toString().padStart(2, '0')}
+            {!ignorePadStart ? value.toString().padStart(2, '0') : value}
         </div>
     );
 }
@@ -100,7 +100,7 @@ export default function Countdown({ expiresTimestamp, onFinished, className, ...
             <div className='row-span-3 h-full place-content-center'>
                 <span className='uppercase text-4xl sm:text-6xl text-yellow-100 bg-yellow-400 p-2 px-3 rounded-2xl inline-block'>Faltan</span>
                 {' '}
-                <TimeUnit className='text-8xl sm:text-9xl font-bold text-yellow-800 mb-1' key={`days-${timer.days}`} value={timer.days} />
+                <TimeUnit className='text-8xl sm:text-9xl font-bold text-yellow-800 mb-1' key={`days-${timer.days}`} value={timer.days} ignorePadStart={true} />
                 {' '}
                 <span className='uppercase text-7xl sm:text-9xl text-yellow-600 w-[4ch]'>{timer.days === 1 ? 'día' : 'días'}</span>
             </div>
