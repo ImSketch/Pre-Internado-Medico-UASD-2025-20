@@ -34,7 +34,7 @@ export default function Home() {
         </nav>
 
         <footer className='mx-auto'>
-          <p className='text-center text-xs text-yellow-800'>Hecho con ❤️ por <a href='https://instagram.com/wuggycakes' className='border-b-1 border-b-yellow-500 text-yellow-950 font-bold' target='_blank' rel='nofollow noopener noreferer'>Omar Ureña</a>, futuro Pre-Intero.</p>
+          <p className='text-center text-xs text-yellow-800'>Hecho con ❤️ por <a href='https://instagram.com/wuggycakes' className='border-b-1 border-b-yellow-500 hover:border-b-3 text-yellow-950 font-bold transition-all' target='_blank' rel='nofollow noopener noreferer'>Omar Ureña</a>, futuro médico Pre-Intero.</p>
         </footer>
 
       </main>
