@@ -102,22 +102,22 @@ export default function Countdown({ expiresTimestamp, onFinished, className, ...
                 {' '}
                 <TimeUnit className='text-8xl sm:text-9xl font-bold text-yellow-800 mb-1' key={`days-${timer.days}`} value={timer.days} />
                 {' '}
-                <span className='uppercase text-7xl sm:text-9xl text-yellow-600'>días</span>
+                <span className='uppercase text-7xl sm:text-9xl text-yellow-600 w-[4ch]'>{timer.days === 1 ? 'día' : 'días'}</span>
             </div>
-            <div className='flex flex-row gap-7 items-center'>
+            <div className='flex flex-row gap-4 items-center'>
                 <TimeUnit className='text-yellow-700 sm:text-6xl text-3xl font-bold' key={`hours-${timer.hours}`} value={timer.hours} />
                 {' '}
-                <span className='uppercase sm:text-6xl text-3xl text-yellow-500'>horas</span>
+                <span className='uppercase sm:text-6xl text-3xl text-yellow-500 w-[5ch]'>{timer.hours === 1 ? 'hora' : 'horas'}</span>
             </div>
-            <div className='flex flex-row gap-7 items-center col-start-2 row-start-2'>
+            <div className='flex flex-row gap-4 items-center col-start-2 row-start-2'>
                 <TimeUnit className='text-yellow-700 sm:text-6xl text-3xl font-bold' key={`minutes-${timer.minutes}`} value={timer.minutes} />
                 {' '}
-                <span className='uppercase sm:text-6xl text-3xl text-yellow-500'>minutos</span>
+                <span className='uppercase sm:text-6xl text-3xl text-yellow-500 w-[7ch]'>{timer.minutes === 1 ? 'minuto' : 'minutos'}</span>
             </div>
-            <div className='flex flex-row gap-7 items-center col-start-2 row-start-3'>
+            <div className='flex flex-row gap-4 items-center col-start-2 row-start-3'>
                 <TimeUnit className='text-yellow-700 sm:text-6xl text-3xl font-bold' key={`seconds-${timer.seconds}`} value={timer.seconds} />
                 {' '}
-                <span className='uppercase sm:text-6xl text-3xl text-yellow-500'>segundos</span>
+                <span className='uppercase sm:text-6xl text-3xl text-yellow-500 w-[8ch]'>{timer.seconds === 1 ? 'segundo' : 'segundos'}</span>
             </div>
         </div>
     );
